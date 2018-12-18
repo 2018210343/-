@@ -1,0 +1,11 @@
+page{ background: rgb(255, 255, 255); font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif; }
+.contain_detail_cnt { height: 100%; width: 100%; overflow: hidden; }
+
+.picker { font-size: 18pt; margin-left: 20px; margin-top: 10px; color: rgba(3, 2, 31, 0.712)}
+
+.box-title{ padding: 25px 10px; background: #dad3d300; }
+.title{ font-size: 24px; line-height: 25px; color: rgb(50, 212, 64); font-weight: 600; }
+
+.content{ line-height: 1.8em; margin: 20px 0; font-size: 20px; color: rgba(3, 2, 31, 0.712); }
+.scrollLoading{ width: 100%; height: 220px; display: block; margin: 10px 0; }
+.contView{ padding: 0 20px 10px; }

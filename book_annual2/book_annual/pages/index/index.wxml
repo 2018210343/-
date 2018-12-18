@@ -1,0 +1,17 @@
+<scroll-view scroll-y="true" class="contain_detail_cnt" style="height:{{winHeight - 40}}px;">
+<view class='picker'>选择年份</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{years}}">
+  <view class='picker'>当前选择年份: {{year}}年</view>
+</picker>
+	<!-- 标题 -->
+	<view class="box-title">
+		<text class="title">{{data.title}}</text>
+	</view>
+
+	<!-- 内容 -->
+	<view class="content" scroll-y="true">
+		<block wx:for="{{booklist}}" wx:key="id">
+    			<view id="{{item.id}}" data-index="{{item.index}}" data-title="{{item.title}}" bindtap="navPage" class="contView">{{item.title}}</view>
+		</block>
+	</view>
+  </scroll-view>

@@ -1,0 +1,23 @@
+<view class="booksinfo" style="background: url({{bg ||''}})">
+  <view wx:if="{{subject}}" class="top-item">
+    <image src="{{subject.cover}}" class="top-image"/>
+    <view class="top-detail">
+      <view class="page-title">{{title}}</view>
+      <view class="top-separator"/>
+      <view class="top-title">{{subject.title}}</view>
+      <block wx:for="{{subject.writers}}" wx:key="{{item}}">
+        <view class="top-writer">{{item}}</view>
+      </block>
+    </view>
+  </view>
+
+  <scroll-view wx:if="{{subjects && subjects.length > 0}}" scroll-x="true" class="subject-container">
+    <block wx:for="{{subjects}}" wx:key="id">
+      <view class="subject-item">
+        <image src="{{item.cover}}" class="subject-image"/>
+        <view class="subject-title">{{item.title}}</view>
+      </view>
+    </block>
+  </scroll-view>
+    <view wx:elif="{{content}}" class="page-content">{{content}}</view>  
+</view>
